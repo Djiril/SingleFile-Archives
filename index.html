@@ -16,7 +16,7 @@
             const files = await response.json();
             const listElement = document.createElement("ul");
             for (const file of files) {
-                if (file.name != "index.html") {
+                if (file.name != "index.html" and file.name != "CNAME") {
                     const itemElement = document.createElement("li");
                     const linkElement = document.createElement("a");
                     linkElement.href = file.path;
