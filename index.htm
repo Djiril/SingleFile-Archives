@@ -22,6 +22,25 @@
                     listElement.appendChild(itemElement);
                 }
             }
+            
+            const itemElement = document.createElement("li");
+            listElement.appendChild(itemElement);
+           
+            
+            for (const file of files) {
+                if (file.name.includes(".html")) {
+                    const itemElement = document.createElement("li");
+                    const linkElement = document.createElement("a");
+                    linkElement.href = "https://getpocket.com/edit?url=http://read.cincet.net/"+file.path;
+                    
+                    linkElement.textContent = file.name;
+                    linkElement.target = "_blank";
+                    itemElement.appendChild(linkElement);
+                    listElement.appendChild(itemElement);
+                }
+                
+            }
+            
             document.body.appendChild(listElement);
         })();
     </script>
